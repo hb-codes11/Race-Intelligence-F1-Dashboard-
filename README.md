@@ -2,106 +2,115 @@
 
 # 🏁 F1 Race Intelligence
 
-### Formula 1 race results, explored through Tableau
+### A Tableau project on Formula 1 race results
 
-An interactive data analytics course project exploring team and driver points, non-finishes, weather, tyre compounds, and circuit types.
+[View Dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Dashboard1) · [Explore Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1) · [Project Website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/)
 
-<p>
-  <a href="https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Dashboard1?publish=yes"><strong>Open Tableau Dashboard</strong></a>
-  &nbsp; · &nbsp;
-  <a href="https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1?publish=yes"><strong>Explore Tableau Story</strong></a>
-</p>
-
-<p>
-  <img alt="Seasons covered: 2010–2026" src="https://img.shields.io/badge/Seasons-2010%E2%80%932026-e10600?style=for-the-badge">
-  <img alt="Race-result rows: 6464" src="https://img.shields.io/badge/Race%20results-6%2C464-222222?style=for-the-badge">
-  <img alt="Tableau visualizations: 9" src="https://img.shields.io/badge/Tableau%20views-9-00a1e4?style=for-the-badge">
-</p>
+**6,464 race-result records · 2010–2026 in the supplied dataset · 9 Tableau views**
 
 </div>
 
----
+## Why I built this
 
-## About the project
+I built this project for my **Data Analytics with Tableau** course. Having some familiarity with Formula 1 helped me connect the data to questions I could understand: how team points change across seasons, which drivers have the highest totals, and how non-finishes are distributed across different conditions.
 
-Formula 1 results contain a lot of information about drivers, constructors, seasons, circuits, and race conditions. This project brings selected summaries together in Tableau so a student, fan, or analyst can compare patterns in one place.
+The result is a Tableau dashboard, a nine-scene Story, and a small website for opening the published analysis. The figures come from the course dataset; I have not independently verified every record against official F1 results.
 
-The analysis is **descriptive**. It summarizes the supplied course dataset; it does not predict race outcomes or prove that weather, tyre choice, or another factor caused a result.
+## Explore the project
 
-## Tableau views
+| Resource | Link |
+|---|---|
+| Tableau dashboard | [Open dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Dashboard1) |
+| Tableau Story | [Open nine-scene Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1) |
+| Website | [Open project website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/) |
+| Documentation | [Read the development report](docs/project-report.md) |
 
-The workbook contains a dashboard and a nine-scene Tableau Story:
+## Dataset
 
-| # | View | What it shows |
-|---:|---|---|
-| 1 | Team Points by Season | Team points across the selected seasons |
-| 2 | Driver Points Leaderboard | Driver points totals, ranked |
-| 3 | Non-finishes by Reason | Recorded DNF flags by reason |
-| 4 | Non-finish Rate by Weather | Average DNF flag by weather category |
-| 5 | Team Points Leaderboard | Constructor points totals, ranked |
-| 6 | Average Positions Gained by Team | Mean positions gained by team |
-| 7 | Starting Tyre Distribution | Race-record count by starting compound |
-| 8 | Race Points by Circuit Type | Points totals by circuit category |
-| 9 | Average Finish Position by Team | Mean finish position by team |
+The course provided an Excel workbook named `F1 Racing Project Dataset.xlsx`. It contains five sheets:
 
-## Data source and scope
+- `race_results`
+- `circuits`
+- `championship_standings`
+- `lap_intelligence`
+- `qualifying_results`
 
-The course-provided workbook, `F1 Racing Project Dataset.xlsx`, contains five sheets: `race_results`, `circuits`, `championship_standings`, `lap_intelligence`, and `qualifying_results`. This Tableau project uses the `race_results` sheet, which has **6,464 rows** in the supplied copy and covers the displayed seasons **2010–2026**.
+I used **`race_results`**, which showed **6,464 rows** in Tableau. Its season values range from **2010 to 2026**. The other sheets were not joined to this analysis.
 
-The source workbook is not included here because redistribution permission for the course resource has not been confirmed. Use the file provided through your course. The other four sheets are not joined into the current dashboard. Validate country and circuit totals against a trusted race calendar before treating them as hosted Grand Prix counts.
+The Excel file and local Tableau workbook are not included in this repository. To recreate the analysis, use the dataset supplied by the course.
 
-## Method at a glance
+## What the charts show
 
-- **Points:** Sum of `Points` by driver, team, season, or circuit type.
-- **Non-finish rate:** Average of the 0/1 `Dnf` field by weather category.
-- **Positions:** Average of the positions-gained and finish-position fields by team.
-- **Tyres:** Count of race records grouped by starting compound.
-- **Missing finishes:** Non-finish rows are retained for DNF analysis; their finish position may be blank.
-- **Historical comparison:** Points are shown as recorded in the supplied workbook, not recalculated using one modern scoring system.
+| View | Measure used | Purpose |
+|---|---|---|
+| Team Points by Season | Sum of points by season and team | Compare how each team's recorded points change over time |
+| Driver Points Leaderboard | Sum of points by driver | Rank drivers by their points in the dataset |
+| DNF by Reason | Sum of the DNF flag by reason | Compare recorded reasons for non-finishes |
+| DNF by Weather | Average of the DNF flag by weather | Compare the proportion of records marked as DNF |
+| Team Points Leaderboard | Sum of points by team | Compare team totals |
+| Average Positions Gained by Team | Average positions gained | Compare movement from starting to finishing positions |
+| Starting Tyre Distribution | Count of records by starting compound | Compare how often each starting compound appears |
+| Race Points by Circuit Type | Sum of points by circuit type | Compare totals across circuit categories |
+| Average Finish Position by Team | Average finish position | Compare mean finishing positions |
 
-See the [step-by-step project report](docs/project-report.md) for the problem statement, requirements, reference review, preparation notes, performance-testing record, and limitations.
+The dashboard puts these views together. The Story presents them as separate scenes with captions.
 
-## Project website
+## How I developed it
 
-This repository also contains a responsive landing page that embeds the Tableau Story and links to the full dashboard. Open [`index.html`](index.html) in a browser to preview it locally; the Tableau embed needs an internet connection.
+1. Connected the Excel workbook to Tableau Public and opened `race_results`.
+2. Reviewed the available fields, row count, and season range.
+3. Changed Season from a summed measure to a dimension for the trend chart.
+4. Used sums for points, averages for the position measures, and counts for starting tyres.
+5. Kept DNF records for the non-finish charts and added relevant Season and DNF Reason filters.
+6. Built the worksheets, assembled the dashboard, and added the Story captions.
+7. Published the workbook to Tableau Public.
+8. Created the website and deployed it through GitHub Pages.
 
-After enabling GitHub Pages, the website will be available at:
+The [project report](docs/project-report.md) explains the problem, chart choices, development steps, and current limitations in more detail.
 
-**https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/**
+## Reading the results
 
-The repository is configured to publish with GitHub Actions. The first deployment may take a few minutes after Pages is enabled.
+A few details matter when interpreting the charts:
 
-## Repository contents
+- **6,464 is a count of result records, not a count of Grand Prix events.**
+- Driver and team totals describe the supplied records. They should not be presented as verified career statistics.
+- A higher points total for one circuit category can reflect more records in that category.
+- The weather chart shows an association with DNF flags. It does not establish the cause of a non-finish.
+- Average finish position depends on the records with a valid finish value.
+- Points are used as supplied, without adjusting historical seasons to a common scoring system.
+
+## Website and deployment
+
+The website uses HTML and CSS and embeds the published Tableau Story. It requires an internet connection to load the visualization.
+
+GitHub Pages is configured to use **GitHub Actions**. Changes pushed to `main` trigger the deployment workflow.
+
+To open the website locally, download the repository and open `index.html` in a browser.
+
+## Repository structure
 
 ```text
 .
-├── .github/workflows/pages.yml   # Deploys the static site to GitHub Pages
-├── docs/project-report.md        # Project documentation
-├── index.html                    # Landing page and Tableau Story embed
-├── styles.css                    # Responsive styling
-├── .gitignore                    # Excludes local data/workbook files
+├── .github/workflows/pages.yml   # GitHub Pages deployment
+├── docs/project-report.md        # Detailed project documentation
+├── index.html                    # Website and Tableau embed
+├── styles.css                    # Website styling
+├── .gitignore
 └── README.md
 ```
 
-## Recreate the Tableau workbook
+## Performance notes
 
-1. Get the workbook from the authorized course source.
-2. In Tableau Public, connect to the Excel workbook and select `race_results`.
-3. Create the nine views listed above using the aggregations in **Method at a glance**.
-4. Assemble the views into a dashboard and a nine-point story with captions.
-5. Publish to Tableau Public and update the Dashboard and Story links in this README and `index.html` if their URLs change.
+The documented workbook has nine worksheet views, one dashboard, and nine Story scenes. The charts use aggregations of source fields rather than custom calculated fields.
 
-## Performance record
-
-The Tableau workbook uses 6,464 race-result rows, nine worksheet views, one dashboard, and nine story scenes. No custom calculated fields were needed for the documented views; the charts use Tableau aggregations of source fields. Rendering times have not been measured on a controlled device and network, so this repository makes no load-time claim. Filter scope and dashboard-wide propagation should be recorded if performance testing is completed.
+Loading times have not been measured in a controlled test, and dashboard-wide filter behaviour has not been fully checked. Those checks remain separate from publishing the project.
 
 ## References
 
-- Tableau, [Stories](https://help.tableau.com/current/pro/desktop/en-us/stories.htm)
-- Tableau, [Creating a Story](https://help.tableau.com/current/pro/desktop/en-us/story_create.htm)
-- Formula 1, [The beginner’s guide to the F1 Drivers’ Championship](https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-f1-drivers-championship.53MjXJzTDxQnfxfoCLnxNZ)
-- Formula 1, [The beginner’s guide to the Formula 1 weekend](https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-formula-1-weekend.5RFZzGXNhEi9AEuMXwo987)
+- [Tableau: Stories](https://help.tableau.com/current/pro/desktop/en-us/stories.htm)
+- [Tableau: Create a Story](https://help.tableau.com/current/pro/desktop/en-us/story_create.htm)
+- [Formula 1: Beginner's guide to the Drivers' Championship](https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-f1-drivers-championship.53MjXJzTDxQnfxfoCLnxNZ)
+- [Formula 1: Beginner's guide to a race weekend](https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-formula-1-weekend.5RFZzGXNhEi9AEuMXwo987)
 
-## Author
-
-**Harsh Bhadrawale** · Data Analytics with Tableau course project
+**Harsh Bhadrawale**  
+Data Analytics with Tableau — course project
