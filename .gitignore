@@ -1,0 +1,9 @@
+# Course-provided source data and Tableau extracts/workbooks
+F1 Racing Project Dataset.xlsx
+*.hyper
+*.twb
+*.twbx
+
+# Local operating-system files
+.DS_Store
+Thumbs.db
