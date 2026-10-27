@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c10">
+    <meta name="description" content="Explore Formula 1 race results through an interactive Tableau dashboard and story.">
+    <title>F1 Race Intelligence | Tableau Project</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="F1 Race Intelligence home"><span class="brand-mark">F1</span><span>RACE INTELLIGENCE</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#project">Project</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="docs/project-report.md">Documentation</a>
+        <a class="nav-github" href="https://github.com/hb-codes11/Race-Intelligence-F1-Dashboard-">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="project">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> TABLEAU PUBLIC · DATA ANALYTICS PROJECT</p>
+          <h1>Every race tells<br>a <span>data story.</span></h1>
+          <p class="hero-description">Explore driver and team points, race non-finishes, weather, tyres, and circuits across the supplied Formula 1 results dataset.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#dashboard">Explore dashboard <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1?publish=yes" target="_blank" rel="noreferrer">Open on Tableau Public ↗</a>
+          </div>
+        </div>
+        <div class="hero-stats" aria-label="Dataset overview">
+          <div><strong>6,464</strong><span>race-result rows</span></div>
+          <div><strong>17</strong><span>seasons shown</span></div>
+          <div><strong>9</strong><span>visual scenes</span></div>
+        </div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </section>
+
+      <section class="dashboard-section" id="dashboard">
+        <div class="section-heading">
+          <div><p class="eyebrow">INTERACTIVE TABLEAU STORY</p><h2>Explore the race data</h2></div>
+          <a class="text-link" href="https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1?publish=yes" target="_blank" rel="noreferrer">Open full view ↗</a>
+        </div>
+        <div class="viz-frame">
+          <iframe
+            title="F1 Race Intelligence Tableau Public story"
+            src="https://public.tableau.com/views/F1RaceIntelligencedashboard/Story1?:showVizHome=no&:embed=true"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <p class="embed-note">If the story does not load here, <a href="https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1?publish=yes" target="_blank" rel="noreferrer">open it directly on Tableau Public</a>.</p>
+      </section>
+
+      <section class="visuals-section">
+        <div class="section-heading"><div><p class="eyebrow">NINE VIEWS · ONE STORY</p><h2>What you can explore</h2></div></div>
+        <div class="visual-grid">
+          <article class="visual-card"><span>01</span><h3>Team points by season</h3><p>Compare team points from one season to another.</p></article>
+          <article class="visual-card"><span>02</span><h3>Driver points leaderboard</h3><p>See how driver point totals rank in this dataset.</p></article>
+          <article class="visual-card"><span>03</span><h3>Non-finishes by reason</h3><p>Review the recorded DNF reason categories.</p></article>
+          <article class="visual-card"><span>04</span><h3>Non-finish rate by weather</h3><p>Compare the average DNF flag across weather labels.</p></article>
+          <article class="visual-card"><span>05</span><h3>Team points leaderboard</h3><p>Compare total points by constructor team.</p></article>
+          <article class="visual-card"><span>06</span><h3>Average positions gained</h3><p>Compare the average positions-gained measure by team.</p></article>
+          <article class="visual-card"><span>07</span><h3>Starting tyre distribution</h3><p>Explore the recorded starting compound counts.</p></article>
+          <article class="visual-card"><span>08</span><h3>Points by circuit type</h3><p>Compare summed points across circuit categories.</p></article>
+          <article class="visual-card"><span>09</span><h3>Average finish position</h3><p>Compare mean finish position by team.</p></article>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div><p class="eyebrow">PROJECT SCOPE</p><h2>A clear view of the data, with its limits.</h2></div>
+        <p>This is an educational, descriptive analysis of one course-provided workbook sheet. It summarizes associations in the supplied records; it does not show that weather or tyre choice caused a race result. The source workbook is not redistributed here.</p>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#top"><span class="brand-mark">F1</span><span>RACE INTELLIGENCE</span></a><span>Built by Harsh Bhadrawale · Tableau Public project</span><a href="https://github.com/hb-codes11/Race-Intelligence-F1-Dashboard-">View source on GitHub ↗</a></footer>
+  </body>
+</html>
