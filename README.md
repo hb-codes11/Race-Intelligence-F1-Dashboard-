@@ -69,7 +69,7 @@ After enabling GitHub Pages, the website will be available at:
 
 **https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/**
 
-To enable it, open **Settings → Pages** in the repository and select **GitHub Actions** as the build and deployment source. The included workflow publishes the site from the `main` branch.
+The included workflow attempts to enable Pages and publish the site from the `main` branch. If GitHub requires a manual setup, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
 
 ## Repository contents
 
