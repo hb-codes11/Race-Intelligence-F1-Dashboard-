@@ -4,7 +4,7 @@
 
 ### A Tableau project on Formula 1 race results
 
-[View Dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Dashboard1) · [Explore Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1) · [Project Website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/)
+[View Dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard-Harsh/Dashboard1) · [Explore Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard-Harsh/Story1) · [Project Website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/)
 
 **6,464 race-result records · 2010–2026 in the supplied dataset · 9 Tableau views**
 
@@ -20,8 +20,8 @@ The result is a Tableau dashboard, a nine-scene Story, and a small website for o
 
 | Resource | Link |
 |---|---|
-| Tableau dashboard | [Open dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Dashboard1) |
-| Tableau Story | [Open nine-scene Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1) |
+| Tableau dashboard | [Open dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard-Harsh/Dashboard1) |
+| Tableau Story | [Open nine-scene Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard-Harsh/Story1) |
 | Website | [Open project website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/) |
 | Documentation | [Read the development report](docs/project-report.md) |
 
@@ -81,7 +81,7 @@ A few details matter when interpreting the charts:
 
 ## Website and deployment
 
-The website uses HTML and CSS and embeds the published Tableau Story. It requires an internet connection to load the visualization.
+The website uses HTML, CSS, and a small JavaScript view switcher to embed either the published Tableau dashboard or Story. It requires an internet connection to load the visualization.
 
 GitHub Pages is configured to use **GitHub Actions**. Changes pushed to `main` trigger the deployment workflow.
 
@@ -93,7 +93,7 @@ To open the website locally, download the repository and open `index.html` in a 
 .
 ├── .github/workflows/pages.yml   # GitHub Pages deployment
 ├── docs/project-report.md        # Detailed project documentation
-├── index.html                    # Website and Tableau embed
+├── index.html                    # Website, Tableau embed, and view switcher
 ├── styles.css                    # Website styling
 ├── .gitignore
 └── README.md

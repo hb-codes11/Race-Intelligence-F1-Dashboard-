@@ -4,7 +4,7 @@
 **Author:** Harsh Bhadrawale  
 **Course:** Data Analytics with Tableau
 
-[Dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Dashboard1) · [Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard/Story1) · [Website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/)
+[Dashboard](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard-Harsh/Dashboard1) · [Story](https://public.tableau.com/app/profile/harsh.bhadrawale/viz/F1RaceIntelligencedashboard-Harsh/Story1) · [Website](https://hb-codes11.github.io/Race-Intelligence-F1-Dashboard-/)
 
 ## 1. Project background
 
@@ -157,7 +157,7 @@ Publication confirms that the project has been made available online. It does no
 
 The dashboard and Story were published to Tableau Public under my profile.
 
-The frontend uses HTML and CSS. It embeds the Story in an iframe and provides links to the published project. The website files are stored in GitHub and deployed to GitHub Pages through an Actions workflow.
+The frontend uses HTML, CSS, and a small JavaScript view switcher. It embeds either the dashboard or Story in an iframe and provides direct links to both published views. The website files are stored in GitHub and deployed to GitHub Pages through an Actions workflow.
 
 In the repository settings, GitHub Pages uses **GitHub Actions** as its source. A push to `main` starts the deployment workflow. Tableau serves the embedded visualization; GitHub Pages serves the surrounding website.
 
